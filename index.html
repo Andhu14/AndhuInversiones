@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANDHU-INVERSIONES | Academia Financiera</title>
+
+<style>
+/* =================================
+   1. ESTILOS GENERALES
+================================= */
+
+:root {
+    --negro: #080808;
+    --negro2: #151515;
+    --rojo: #c90024;
+    --rojo2: #f00032;
+    --dorado: #d4af37;
+    --blanco: #ffffff;
+    --gris: #bbbbbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+/* =================================
+   2. ENCABEZADO
+================================= */
+
+header {
+    background: #050505;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 2px solid var(--dorado);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dorado);
+}
+
+.logo span {
+    color: white;
+}
+
+.logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+.btn-login {
+    background: var(--rojo);
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* =================================
+   3. PORTADA
+================================= */
+
+.hero {
+    min-height: 550px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(90deg,#080808 15%,#080808dd 65%,#08080866),
+    url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero small {
+    color: var(--dorado);
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(36px,5vw,60px);
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: var(--rojo2);
+}
+
+.hero p {
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--rojo);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--rojo2);
+}
+
+/* =================================
+   4. SECCIONES
+================================= */
+
+section {
+    padding: 75px 7%;
+}
+
+section h2 {
+    color: var(--dorado);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.card {
+    background: var(--negro2);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--dorado);
+}
+
+.card h3 {
+    color: var(--dorado);
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+/* =================================
+   5. CURSOS
+================================= */
+
+.cursos {
+    background: #111;
+}
+
+.precio {
+    color: var(--dorado);
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.imagen-curso {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   6. BIBLIOTECA
+================================= */
+
+.biblioteca {
+    background: #080808;
+}
+
+.biblioteca .card {
+    border-color: var(--dorado);
+}
+
+/* =================================
+   7. NOSOTROS
+================================= */
+
+.nosotros {
+    background: #151515;
+    text-align: center;
+}
+
+.nosotros p {
+    max-width: 850px;
+    margin: auto;
+    color: var(--gris);
+    line-height: 2;
+}
+
+/* =================================
+   8. CONTACTO
+================================= */
+
+.contacto {
+    text-align: center;
+}
+
+/* =================================
+   9. PIE DE PAGINA
+================================= */
+
+footer {
+    background: #030303;
+    padding: 40px;
+    text-align: center;
+    border-top: 2px solid var(--dorado);
+    color: var(--gris);
+    line-height: 2;
+}
+
+footer h3 {
+    color: var(--dorado);
+}
+
+/* =================================
+   10. RESPONSIVE
+================================= */
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header>
+
+    <div class="logo">
+        ANDHU<span>-INVERSIONES</span>
+        <small>TRADING & BOLSA</small>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#trading">Trading</a>
+        <a href="#biblioteca">Biblioteca</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a href="#login" class="btn-login">Mi cuenta</a>
+
+</header>
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <small>ACADEMIA DE EDUCACIÓN FINANCIERA</small>
+
+        <h1>
+            DOMINA LOS MERCADOS.
+            <span>INVIERTE EN TU FUTURO.</span>
+        </h1>
+
+        <p>
+            Aprende trading, análisis técnico e inversiones
+            en bolsa con cursos especializados y recursos
+            digitales para desarrollar tus conocimientos.
+        </p>
+
+        <a href="#cursos" class="btn">EXPLORAR CURSOS</a>
+
+        <a href="#biblioteca" class="btn">BIBLIOTECA</a>
+
+    </div>
+
+</section>
+
+<!-- CATEGORIAS -->
+<section id="trading">
+
+    <h2>ÁREAS DE FORMACIÓN</h2>
+
+    <div class="grid">
+
+        <article class="card">
+            <h3>TRADING</h3>
+            <p>Análisis de los mercados financieros.</p>
+        </article>
+
+        <article class="card">
+            <h3>FOREX</h3>
+            <p>Mercado internacional de divisas.</p>
+        </article>
+
+        <article class="card">
+            <h3>INVERSIONES</h3>
+            <p>Acciones, ETF y bolsa de valores.</p>
+        </article>
+
+        <article class="card">
+            <h3>ANÁLISIS TÉCNICO</h3>
+            <p>Gráficos, tendencias y estrategias.</p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CURSOS -->
+<section class="cursos" id="cursos">
+
+    <h2>NUESTROS CURSOS</h2>
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="imagen-curso">📈</div>
+            <h3>Trading desde cero</h3>
+            <p>Fundamentos y velas japonesas.</p>
+            <div class="precio">S/ 49.90</div>
+            <button class="btn">Ver curso</button>
+        </article>
+
+        <article class="card">
+            <div class="imagen-curso">🥇</div>
+            <h3>Trading XAU/USD</h3>
+            <p>Análisis técnico especializado en oro.</p>
+            <div class="precio">S/ 89.90</div>
+            <button class="btn">Ver curso</button>
+        </article>
+
+        <article class="card">
+            <div class="imagen-curso">💹</div>
+            <h3>Inversiones en bolsa</h3>
+            <p>Acciones, ETF y estrategias.</p>
+            <div class="precio">S/ 99.90</div>
+            <button class="btn">Ver curso</button>
+        </article>
+
+        <article class="card">
+            <div class="imagen-curso">📊</div>
+            <h3>Análisis técnico avanzado</h3>
+            <p>Fibonacci, Elliott y patrones.</p>
+            <div class="precio">S/ 129.90</div>
+            <button class="btn">Ver curso</button>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- BIBLIOTECA -->
+<section class="biblioteca" id="biblioteca">
+
+    <h2>BIBLIOTECA VIRTUAL</h2>
+
+    <div class="grid">
+
+        <article class="card">
+            <h3>📚 E-BOOKS</h3>
+            <p>Libros digitales de trading.</p>
+        </article>
+
+        <article class="card">
+            <h3>🎥 VIDEO CURSOS</h3>
+            <p>Clases grabadas y tutoriales.</p>
+        </article>
+
+        <article class="card">
+            <h3>📑 MANUALES PDF</h3>
+            <p>Guías y estrategias financieras.</p>
+        </article>
+
+        <article class="card">
+            <h3>📊 HERRAMIENTAS</h3>
+            <p>Plantillas y recursos educativos.</p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- NOSOTROS -->
+<section class="nosotros" id="nosotros">
+
+    <h2>¿QUIÉNES SOMOS?</h2>
+
+    <p>
+        Andhu-Inversiones es una academia digital de formación
+        financiera especializada en trading, análisis técnico
+        e inversiones en bolsa. Nuestro propósito es ofrecer
+        conocimientos y herramientas educativas para formar
+        personas con mayor preparación financiera.
+    </p>
+
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+
+    <h2>COMIENZA TU FORMACIÓN</h2>
+
+    <p>Aprende hoy. Prepárate para los mercados financieros.</p>
+
+    <a href="https://wa.me/" class="btn">
+        CONTACTAR POR WHATSAPP
+    </a>
+
+</section>
+
+<!-- PIE DE PAGINA -->
+<footer>
+
+    <h3>ANDHU-INVERSIONES</h3>
+
+    <p>Trading | Bolsa | Educación Financiera</p>
+
+    <p>© 2026 Andhu-Inversiones. Todos los derechos reservados.</p>
+
+    <small>
+        La información de esta plataforma tiene fines educativos.
+        Las inversiones implican riesgos financieros.
+    </small>
+
+</footer>
+
+<script>
+
+// ANDHU-INVERSIONES
+console.log("Bienvenido a Andhu-Inversiones");
+
+// Funcionalidad inicial de botones
+document.querySelectorAll(".curso button").forEach((boton) => {
+    boton.addEventListener("click", () => {
+        alert("Próximamente podrás acceder a este curso.");
+    });
+});
+
+</script>
+
+</body>
+</html>
